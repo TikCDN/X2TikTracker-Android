@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InputActivity">
+
+    <EditText
+        android:id="@+id/et_url"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="12dp"
+        android:textSize="13sp"
+        android:textColor="@color/black"
+        android:hint="input play url"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/shape_et"
+        android:layout_margin="12dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请选择播放器"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/et_url"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="@+id/et_url"/>
+
+    <RadioGroup
+        android:id="@+id/rg_player"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_choose"
+        android:layout_margin="12dp"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rb_exo"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/select_choose_button"
+            android:checked="true"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="EXOPlayer"
+            android:layout_marginRight="8dp"
+            android:button="@null"/>
+
+        <RadioButton
+            android:id="@+id/rb_ijk"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_marginLeft="8dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/select_choose_button"
+            android:text="IJKPlayer"
+            android:button="@null"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_open"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rg_player"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"
+        android:text="播放"
+        android:background="@drawable/select_choose_button"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

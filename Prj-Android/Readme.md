@@ -1,22 +1,8 @@
-## X2TikTracker
+## X2TikTrackerEngine 使用文档
 
 ### 概述
 
-**X2TikTracker** 是是一款支持基于 P2P 技术的视频加速工具。它集成了 WebRTC 和 HLS 等技术，旨在降低视频点播或直播的带宽消耗，提升播放体验。X2TikTracker 的核心理念是利用终端设备之间的上传能力，实现带宽共享，从而降低对传统 CDN 的依赖。
-
-
-
-#### Demo运行指南
-
-```
-Prj-Android/app/src/main/java/org/anyrtc/tiktracker/Config.kt
-
-在上述类中输入您申请的appId即可
-
-object Config {
-    val appId = "your appId"
-}
-```
+**X2TikTrackerEngine** 是一个用于 P2P CDN 的 Kotlin 库，通过传入一个播放地址实现 P2P 共享，旨在加快播放速度和节省 CDN 流量。
 
 ### 初始化
 
@@ -162,6 +148,6 @@ interface X2HlsShareEngineEventHandler {
 - `onLoadDataStats(stats: DataStats)`: 数据统计信息回调。
 - `onRenewTokenResult(token: String, errorCode: RenewTokenErrCode?)`: 令牌更新结果。
 - `onTokenWillExpire()`: 令牌即将过期。
-- `onPeerOn(peerId: String, peerData: String)`: 一个新的 P2P 节点成功加入网络时，会触发该回调。此时，P2P 网络中会有新的设备或用户参与共享数据或资源。
-- `onPeerOff(peerId: String, peerData: String)`: 一个 P2P 节点或用户从网络中断开时。
+- `onPeerOn(peerId: String, peerData: String)`: 新p2p用户加入共享。
+- `onPeerOff(peerId: String, peerData: String)`: p2p用户停止共享。
 

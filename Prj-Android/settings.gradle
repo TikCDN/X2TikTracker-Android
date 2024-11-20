@@ -1,0 +1,4 @@
+
+rootProject.name = "Prj-Android"
+include ':app'
+include ':X2TikTracker'
