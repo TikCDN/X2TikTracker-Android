@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.run {
             val playerUrl = intent.getStringExtra("playUrl").orEmpty()
-            x2HsrEngine.registerListener(object :X2HlsShareEngineEventHandler{
+            x2HsrEngine.registerListener(object :X2TikTrackerEventHandler {
 
 
                 override fun onShareResult(code: TKT_CODE?) {

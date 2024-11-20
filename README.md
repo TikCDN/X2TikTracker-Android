@@ -140,12 +140,12 @@ fun release()
 
 ### 回调接口
 
-### **X2HlsShareEngineEventHandler**
+### **X2TikTrackerEventHandler**
 
 用于接收播放和共享事件的回调接口：
 
 ```
-interface X2HlsShareEngineEventHandler {
+interface X2TikTrackerEventHandler {
     fun onShareResult(code: TKT_CODE?)
     fun onLoadDataStats(stats: DataStats)
     fun onRenewTokenResult(token: String, errorCode: RenewTokenErrCode?)
