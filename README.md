@@ -76,7 +76,7 @@ fun startPlay(url: String, share: Boolean): Int
 
 - **参数**:
 
-  - `url`: 视频播放地址。
+  - `url`: 视频播放地址,目前仅支持HLS(m3u8)和MPEG-DASH(mpd)。
   - `share`: 是否启用 P2P 共享。
 
 - **返回值**: 操作结果的状态码。
@@ -84,7 +84,7 @@ fun startPlay(url: String, share: Boolean): Int
 - **示例**:
 
   ```
-  val result = engine.startPlay("http://example.com/video.mp4", true)
+  val result = engine.startPlay("http://example.com/video.m3u8", true)
   ```
 
 #### 3. **停止播放**
