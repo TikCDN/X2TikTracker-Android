@@ -17,7 +17,7 @@ class InputActivity : AppCompatActivity() {
               btnOpen.isSelected = !it.isNullOrEmpty()
               btnOpen.isEnabled = !it.isNullOrEmpty()
             }
-            etUrl.setText("https://gcalic.v.myalicdn.com/gc/zyqcdx01_1/index.m3u8?contentid=2820180516001")
+            etUrl.setText("https://gcalic.v.myalicdn.com/gc/zyqcdx01_1/index.m3u8?contentid=2820180516001&useLivePlayer=true")
             btnOpen.setOnClickListener {
                 startActivity(Intent(this@InputActivity,MainActivity::class.java).apply {
                     putExtra("playUrl",etUrl.text.toString())
