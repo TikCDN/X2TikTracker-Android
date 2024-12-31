@@ -2,5 +2,5 @@ package org.anyrtc.tiktracker
 
 object Config {
 
-    val appId = ""
+    val appId = "your appId"
 }

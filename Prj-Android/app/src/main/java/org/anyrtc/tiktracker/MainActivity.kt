@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
 
                 override fun onShareResult(code: TKT_CODE?) {
-                    setTitle(code?.name)
+                    setTitle("ShareResult:"+code?.name)
                 }
 
                 override fun onLoadDataStats(stats: DataStats) {
