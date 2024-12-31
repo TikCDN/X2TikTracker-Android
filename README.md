@@ -112,17 +112,8 @@ fun stopShare(): Int
 
 - **功能**: 停止 P2P 共享。
 
-#### 6. **更新令牌**
 
-```
-fun renewToken(token: String): Int
-```
-
-- **功能**: 更新令牌。
-- 参数
-  - `token`: 新的授权令牌。
-
-#### 7. **获取 p2p URL 地址**
+#### 6. **获取 p2p URL 地址**
 
 ```
 fun getExUrl(): String?
@@ -148,11 +139,8 @@ fun release()
 interface X2TikTrackerEventHandler {
     fun onShareResult(code: TKT_CODE?)
     fun onLoadDataStats(stats: DataStats)
-    fun onRenewTokenResult(token: String, errorCode: RenewTokenErrCode?)
-    fun onTokenWillExpire()
     fun onPeerOff(peerId: String, peerData: String)
     fun onPeerOn(peerId: String, peerData: String)
-    fun onTokenExpired()
 }
 ```
 
@@ -160,8 +148,6 @@ interface X2TikTrackerEventHandler {
 
 - `onShareResult(code: TKT_CODE?)`: P2P 共享结果。
 - `onLoadDataStats(stats: DataStats)`: 数据统计信息回调。
-- `onRenewTokenResult(token: String, errorCode: RenewTokenErrCode?)`: 令牌更新结果。
-- `onTokenWillExpire()`: 令牌即将过期。
 - `onPeerOn(peerId: String, peerData: String)`: 一个新的 P2P 节点成功加入网络时，会触发该回调。此时，P2P 网络中会有新的设备或用户参与共享数据或资源。
 - `onPeerOff(peerId: String, peerData: String)`: 一个 P2P 节点或用户从网络中断开时。
 
